@@ -40,9 +40,9 @@ def run():
 
         output = ""
 
-        input_dict ={'Age':age,'Sex':sex,'ChestPain Type':cp,'Resting Blood Pressure':trtbps,
-                     'Cholestrol':chol,'Fasting Blood Sugar':fbs,'Resting ECG':restecg,'Maximum HRA':thalachh,'Previous peak':oldpeak,
-                     'Slope':slp,'Major Blood Vessels':caa}
+        input_dict ={'age':age,'sex':sex,'cp':cp,'trtbps':trtbps,
+                     'chol':chol,'fbs':fbs,'restecg':restecg,'thalachh':thalachh,'oldpeak':oldpeak,
+                     'slp':slp,'caa':caa}
         input_df = pd.DataFrame([input_dict])
         if st.button("Predict"):
             output = predict(model=model, input_df=input_df)
